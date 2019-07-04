@@ -32,8 +32,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/', routes);
 
-db().then(async () => {
-  app.listen(port || 3000, () => {
-    log().info(msg.server, port, nodeEnv);
-  });
+db();
+
+app.listen(port || 3000, () => {
+  log().info(msg.server, port, nodeEnv);
 });
+
+module.exports = app;

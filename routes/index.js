@@ -9,4 +9,10 @@ router.get('/', (req, res) => {
   });
 });
 
+router.post('/marco', (req, res) => {
+  res.json({
+    message: 'polo',
+  });
+});
+
 module.exports = router;

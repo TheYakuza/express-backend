@@ -1,0 +1,22 @@
+languaje: node_js
+
+node_js:
+  - "8"
+  - "10"
+  - "12"
+  - "stable"
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+  - npm install
+
+env:
+  global:
+    - NODE_ENV=test
+    - PORT=3000
+
+script:
+  - npm test
