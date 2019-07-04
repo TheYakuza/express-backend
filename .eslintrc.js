@@ -10,7 +10,7 @@ module.exports = {
       ],
     },
   },
-  extends: 'airnbnb-base',
+  extends: 'airbnb-base',
   parser: 'babel-eslint',
   rules: {
     'no-console': 0,
