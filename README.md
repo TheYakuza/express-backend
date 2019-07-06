@@ -14,6 +14,11 @@ express backend test
 - [Status](#status)
 - [TOC](#toc)
 - [About](#about)
+- [Develop](#develop)
+	- [Components](#components)
+		- [with propmts](#with-propmts)
+		- [one line](#one-line)
+	- [Full Component](#full-component)
 - [Deploy](#deploy)
 	- [Database](#database)
 	- [Install Packages](#install-packages)
@@ -28,6 +33,62 @@ express backend test
 
 # About
 Backend Stack
+
+# Develop
+
+## Components
+You  can create new components whit `plop`, so if you want to create a new component you only have to use the next example:
+
+the types to create are:
+- **model**: database schema
+- **route**: api route, they are available right next to the creation
+- **controller**: controller with buissnes logic
+- **util**: tools to use across the app.
+- **test**: a template test to make
+
+### with propmts
+
+```bash
+$ yarn component #this is an alias of plop
+
+```
+*you only have to answer the question you can use space to name the component*
+
+**Example**:
+
+```bash
+$ yarn component
+yarn run v1.17.0
+$ plop
+? [PLOP] Please choose a generator. route - Create New Route
+? What is your new route name? api users
+✔  ++ /routes/apiUsers.js
+✔  +- /routes/index.js
+✔  +- /routes/index.js
+✨  Done in 3.85s.
+```
+
+### one line
+
+```bash
+$ yarn component [type] --name [name]
+```
+
+**Example**:
+
+```bash
+➜ yarn component model --name test user
+yarn run v1.17.0
+$ plop model --name test user
+✔  ++ /models/userModel.js
+✔  +- /models/index.js
+✔  +- /models/index.js
+✨  Done in 0.55s.
+```
+
+## Full Component
+
+If you feel like don't want to do the component make like "three" (or four times), you can create the `model`, `controller` and `route` in a single command, also the test for the API
 
 # Deploy
 ## Database
