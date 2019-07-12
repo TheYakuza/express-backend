@@ -1,0 +1,31 @@
+languaje: node_js
+
+os:
+  - linux
+
+node_js:
+  - "10"
+  - "stable"
+
+cache:
+  directories:
+    - node_modules
+
+matrix:
+  include:
+    - node_js: "10"
+    - node_js: "stable"
+
+install:
+  - npm install
+
+env:
+  global:
+    - NODE_ENV=test
+    - PORT=3000
+
+script:
+  - npm run test
+
+# after_script:
+#   - npm run afterScript

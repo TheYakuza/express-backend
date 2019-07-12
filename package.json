@@ -2,5 +2,67 @@
   "name": "express-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "git@github.com:TheYakuza/express-backend.git",
+  "author": "Nicolas Martinez <nmartinezv@icloud.com>",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "precommit": "yarn run lint",
+    "dev": "nodemon index.js",
+    "oldtest": "mocha test/**/*.test.js --timeout 20000 --exit",
+    "test": "echo 'currently no test enable'",
+    "afterScript": "nyc --reporter=html --reporter=text mocha test/**/*.test.js",
+    "component": "plop --plopfile ./generators/plopfile.js"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "_moduleAliases": {
+    "@": "."
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "boom": "^7.3.0",
+    "cheerio": "^1.0.0-rc.3",
+    "console-log-level": "^1.4.1",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.0",
+    "mongoose": "^5.6.2",
+    "morgan": "^1.9.1",
+    "net-ping": "^1.2.3",
+    "nyc": "^14.1.1",
+    "puppeteer": "^1.18.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "rotating-file-stream": "^1.4.2",
+    "shortid": "^2.2.14",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7",
+    "url-report": "^0.0.4"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "babel-eslint": "^10.0.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "plop": "^2.4.0",
+    "sinon": "^7.3.2"
+  }
 }
