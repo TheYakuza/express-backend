@@ -1,0 +1,27 @@
+const express = require('express');
+
+const route = express.Router();
+
+// import controller
+
+route.get('/template', (req, res) => {
+  res.json();
+});
+
+route.get('/template/:id', (req, res) => {
+  res.json();
+});
+
+route.post('/template', (req, res) => {
+  res.json();
+});
+
+route.put('/template/:id', (req, res) => {
+  res.json();
+});
+
+route.delete('/template/:id', (req, res) => {
+  res.json();
+});
+
+module.exports = route;

@@ -12,6 +12,14 @@ module.exports = {
   },
   extends: 'airbnb-base',
   parser: 'babel-eslint',
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "rules": {
+        "no-undef": "off",
+      },
+    },
+  ],
   rules: {
     'no-console': 0,
   },

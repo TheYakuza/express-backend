@@ -1,18 +1,16 @@
 const express = require('express');
 
-const router = express.Router();
+const routes = express();
 
-router.get('/', (req, res) => {
-  res.json({
-    responseCode: 200,
-    message: 'successfully conected!',
-  });
-});
+// const router = express();
 
-router.post('/marco', (req, res) => {
-  res.json({
-    message: 'polo',
-  });
-});
+// require routes
+const base = require('./base');
+const change = require('./change');
 
-module.exports = router;
+
+// export routes
+routes.use('/base', base);
+routes.use('/change', change);
+
+module.exports = { routes };

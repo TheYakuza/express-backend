@@ -1,7 +1,9 @@
-/* eslint-disable */
 const chai = require('chai');
+const {
+  expect,
+} = require('chai');
+
 const chaiHttp = require('chai-http');
-const expect = require('chai').expect;
 
 const app = require('../app');
 
@@ -11,11 +13,11 @@ describe('Testing endpoint', () => {
   describe('Test Base URL', () => {
     it('Watch base URL  ', (done) => {
       chai.request(app)
-      .get('/')
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        done();
-      });
+        .get('/')
+        .end((err, res) => {
+          expect(res).to.have.status(200);
+          done();
+        });
     });
   });
   describe('Test bad URL', () => {

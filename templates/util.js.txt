@@ -1,0 +1,5 @@
+const {{mame}} = () => {
+// put your util here
+};
+
+module.exports = {{name}};

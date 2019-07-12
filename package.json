@@ -8,9 +8,12 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "precommit": "yarn run lint",
     "dev": "nodemon index.js",
-    "test": "mocha ./test/**/* --timeout 20000 --exit",
-    "afterScript": "nyc --reporter=html --reporter=text mocha test/*"
+    "test": "mocha test/**/*.test.js --timeout 20000 --exit",
+    "afterScript": "nyc --reporter=html --reporter=text mocha test/**/*.test.js",
+    "component": "plop --plopfile ./generators/plopfile.js"
   },
   "engines": {
     "node": "10"
@@ -22,6 +25,7 @@
     "app-module-path": "^2.2.0",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
+    "boom": "^7.3.0",
     "cheerio": "^1.0.0-rc.3",
     "console-log-level": "^1.4.1",
     "cookie-parser": "^1.4.4",
@@ -33,11 +37,14 @@
     "mongoose": "^5.6.2",
     "morgan": "^1.9.1",
     "net-ping": "^1.2.3",
+    "nyc": "^14.1.1",
     "puppeteer": "^1.18.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "rotating-file-stream": "^1.4.2",
     "shortid": "^2.2.14",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7",
     "url-report": "^0.0.4"
   },
   "devDependencies": {
@@ -54,6 +61,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
+    "plop": "^2.4.0",
     "sinon": "^7.3.2"
   }
 }

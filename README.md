@@ -66,7 +66,10 @@ $ plop
 ✔  +- /routes/index.js
 ✔  +- /routes/index.js
 ✨  Done in 3.85s.
+
 ```
+
+> here you can put name with blank spaces, the system will gonna change it to camel case by default
 
 ### one line
 
@@ -77,7 +80,7 @@ $ yarn component [type] --name [name]
 **Example**:
 
 ```bash
-➜ yarn component model --name test user
+➜ yarn component model --name user
 yarn run v1.17.0
 $ plop model --name test user
 ✔  ++ /models/userModel.js
@@ -85,6 +88,7 @@ $ plop model --name test user
 ✔  +- /models/index.js
 ✨  Done in 0.55s.
 ```
+> in the single line mode you can only put name without blank spaces, we recommend to use camel case to name it
 
 ## Full Component
 

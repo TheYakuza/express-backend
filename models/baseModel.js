@@ -1,17 +1,15 @@
 const mongoose = require('mongoose');
 const shortid = require('shortid');
 
-const commerceSchema = mongoose.Schema({
+const baseSchema = mongoose.Schema({
   _id: {
     type: String,
     default: shortid.generate,
   },
-  name: String,
-  language: String,
-  version: String,
+  // put your schema params here
 }, {
   timestamps: true,
 });
 
 
-module.exports = mongoose.model('commerce', commerceSchema);
+module.exports = mongoose.model('base', baseSchema);
