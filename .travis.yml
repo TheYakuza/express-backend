@@ -2,7 +2,6 @@ languaje: node_js
 
 os:
   - linux
-  - osx
 
 node_js:
   - "10"
