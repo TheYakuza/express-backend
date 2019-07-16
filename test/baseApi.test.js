@@ -13,7 +13,7 @@ describe('Testing endpoint', () => {
   describe('Test Base URL', () => {
     it('Watch base URL  ', (done) => {
       chai.request(app)
-        .get('/')
+        .get('/api')
         .end((err, res) => {
           expect(res).to.have.status(200);
           done();
@@ -23,7 +23,7 @@ describe('Testing endpoint', () => {
   describe('Test bad URL', () => {
     it('bad URL', (done) => {
       chai.request(app)
-        .get('/404BadUrl')
+        .get('/api/404BadUrl')
         .end((err, res) => {
           expect(res).to.have.status(404);
           done();

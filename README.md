@@ -96,6 +96,8 @@ If you feel like don't want to do the component make like "three" (or four times
 
 # Deploy
 ## Database
+This backend is created to use  **Mongo Atlas**
+
 
 ## Install Packages
 
