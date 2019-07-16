@@ -1,17 +1,17 @@
 const express = require('express');
 
-const api = express.Router();
+const api = express();
 
 const {{camelCase name}}Controller = require('@/controllers/{{camelCase name}}Controller');
 
-api.route('/{{camelCase name}}')
+api.route('/')
   .get({{camelCase name}}Controller.index)
   .post({{camelCase name}}Controller.new);
 
-api.route('/{{camelCase name}}/healtcheck')
+api.route('/health')
   .get({{camelCase name}}Controller.health);
 
-api.route('/{{camelCase name}}/:id')
+api.route('/:id')
   .get({{camelCase name}}Controller.view)
   .patch({{camelCase name}}Controller.update)
   .put({{camelCase name}}Controller.update)

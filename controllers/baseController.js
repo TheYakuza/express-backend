@@ -3,8 +3,7 @@
 // const Base = require('@/models/baseModel');
 
 exports.health = (req, res) => {
-  console.log('hace el check');
-  return res.status(200).send({
+  res.status(200).send({
     status: 'success',
     message: 'api base available',
   });
@@ -22,7 +21,7 @@ exports.health = (req, res) => {
 //   }
 // };
 //
-// exports.new = async (req, res) => {
+// exports.add = async (req, res) => {
 //   try {
 //     const base = new Base(req.body);
 //     const data = base.save();

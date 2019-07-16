@@ -1,16 +1,26 @@
 const express = require('express');
 
-const routes = express();
-
-// const router = express();
+const router = express.Router();
 
 // require routes
-const base = require('./base');
-const change = require('./change');
+const base = require('@/routes/base');
 
+router.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'api',
+  });
+});
 
 // export routes
-routes.use('/base', base);
-routes.use('/change', change);
+router.use('/base', base);
 
-module.exports = { routes };
+router.use((req, res) => {
+  const msg = {
+    error: true,
+    codigo: 404,
+    mensaje: 'URL no encontrada',
+  };
+  res.status(404).send(msg);
+});
+
+module.exports = router;

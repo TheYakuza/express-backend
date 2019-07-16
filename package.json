@@ -11,8 +11,8 @@
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "precommit": "yarn run lint",
     "dev": "nodemon index.js",
-    "oldtest": "mocha test/**/*.test.js --timeout 20000 --exit",
-    "test": "echo 'currently no test enable'",
+    "test": "mocha test/**/*.test.js --timeout 20000 --exit",
+    "notest": "echo 'currently no test enable'",
     "afterScript": "nyc --reporter=html --reporter=text mocha test/**/*.test.js",
     "component": "plop --plopfile ./generators/plopfile.js"
   },

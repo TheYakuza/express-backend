@@ -8,7 +8,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 
 const { msg } = require('@/lib/messages');
 
-const { routes } = require('@/routes/index');
+const routes = require('@/routes/index');
 
 const { env } = process;
 
