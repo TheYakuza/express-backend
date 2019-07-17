@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // require routes
+const user = require('./user');
 const base = require('@/routes/base');
 
 router.get('/', (req, res) => {
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // export routes
+router.use('/user', user);
 router.use('/base', base);
 
 router.use((req, res) => {
