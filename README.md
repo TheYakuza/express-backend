@@ -32,7 +32,7 @@ express backend test
 <!-- /TOC -->
 
 # About
-Backend Stack
+I'm pretty lazy, so I've created a
 
 # Develop
 
