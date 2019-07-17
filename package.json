@@ -50,6 +50,7 @@
     "request-promise": "^4.2.4",
     "rotating-file-stream": "^1.4.2",
     "shortid": "^2.2.14",
+    "should": "^13.2.3",
     "swagger-jsdoc": "^3.3.0",
     "swagger-ui-express": "^4.0.7",
     "url-report": "^0.0.4"

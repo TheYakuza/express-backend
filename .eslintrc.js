@@ -17,6 +17,7 @@ module.exports = {
       "files": ["**/*.test.js"],
       "rules": {
         "no-undef": "off",
+        "no-unused-vars": "off",
       },
     },
   ],

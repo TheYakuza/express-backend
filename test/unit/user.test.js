@@ -10,18 +10,10 @@ const app = require('../../app');
 chai.use(chaiHttp);
 
 describe('Testing endpoint user', () => {
-  describe('Test URL', () => {
+  describe('Test Healthcheck', () => {
     it('Test Healthcheck', (done) => {
       chai.request(app)
         .get('/api/user/health')
-        .end((err, res) => {
-          expect(res).to.have.status(200);
-          done();
-        });
-    });
-    it('Watch base URL', (done) => {
-      chai.request(app)
-        .get('/api/user')
         .end((err, res) => {
           expect(res).to.have.status(200);
           done();
